@@ -2,15 +2,21 @@ import express  from "express";
 import mongoose  from "mongoose";
 import Data from './data.js';
 import Videos from './dbModel.js';
- 
+
 
                                     /* START APP CONFIG */
 
 /* create a simple instance */
 const app=express();
 /* create a port */
-const port = 9000;
+const port = process.env.PORT || 9000;
+/* PROCESS ENV PORT SIRVE PARA OBTENER EL PUERTO AL MOMENTO DE SUBIR A HEROKU */
                                     /* END APP CONFIG */
+
+
+
+
+
 
                                     /* START MIDDLEWARES */
 //pasa los datos a json
@@ -20,8 +26,11 @@ app.use((req,res,next)=>{
     res.setHeader('Access-Control-Allow-Headers','*'),
     next()
 })
-
                                     /* END MIDDLEWARES */
+
+
+
+
 
 
                                     /* START DATABASE CONFIG */
