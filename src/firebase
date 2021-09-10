@@ -1,0 +1,15 @@
+import firebase from "firebase";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAp4rV1E6lTgQT0bOkikUxNGfQ91qKIAEU",
+  authDomain: "tiktok-clone-1b4cc.firebaseapp.com",
+  projectId: "tiktok-clone-1b4cc",
+  storageBucket: "tiktok-clone-1b4cc.appspot.com",
+  messagingSenderId: "296411353490",
+  appId: "1:296411353490:web:7eb596b1519710bca4314b"
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const db = firebaseApp.firestore();
+
+export default db;
